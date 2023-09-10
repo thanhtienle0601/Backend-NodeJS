@@ -1,0 +1,27 @@
+{
+  "name": "backend-nodejs",
+  "version": "1.0.0",
+  "description": "Backend Nodejs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thanhtienle0601/Backend-NodeJS.git"
+  },
+  "keywords": [
+    "nodejs",
+    "react"
+  ],
+  "author": "TonyDev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thanhtienle0601/Backend-NodeJS/issues"
+  },
+  "homepage": "https://github.com/thanhtienle0601/Backend-NodeJS#readme",
+  "dependencies": {
+    "express": "4.18.2"
+  }
+}
