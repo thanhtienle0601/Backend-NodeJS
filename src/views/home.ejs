@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div class="topnav">
+      <a href="/" class="active">Home</a>
+      <a href="/create">Create User</a>
+    </div>
+    <div class="table-container">
+      <!-- <%= JSON.stringify(listUsers) %> -->
+      <h3>List User:</h3>
+      <table>
+        <tr></tr>
+        <tr>
+          <th>ID</th>
+          <th>Email</th>
+          <th>Name</th>
+          <th>City</th>
+          <th>Action</th>
+        </tr>
+        <!-- <% for (var i = 0; i < listUsers.length; i++) { %>
+        <tr>
+          <td><%= listUsers[i].id %></td>
+          <td><%= listUsers[i].email %></td>
+          <td><%= listUsers[i].name %></td>
+          <td><%= listUsers[i].city %></td>
+          <td>
+            <button>Edit</button>
+            <button>Delete</button>
+          </td>
+        </tr>
+        <% } %> -->
+        <% listUsers.forEach( function(listUser, index) { %>
+        <tr>
+          <td><%= listUser.id %> - <%= index %></td>
+          <td><%= listUser.email %></td>
+          <td><%= listUser.name %></td>
+          <td><%= listUser.city %></td>
+          <td>
+            <a href="/update/<%= listUser.id %>">Edit</a>
+            <form action="/delete-user/<%= listUser.id %>" method="post">
+              <button>Delete</button>
+            </form>
+          </td>
+        </tr>
+        <% });%>
+      </table>
+    </div>
+  </body>
+</html>
