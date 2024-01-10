@@ -5,12 +5,15 @@ const app = express();
 const configViewEngine = require("./config/viewEngine");
 const webRoutes = require("./routes/web");
 const apiRoutes = require("./routes/api");
+const fileUpload = require('express-fileupload');
 const connection = require("./config/database");
 
 const port = process.env.PORT || 8888;
 const hostname = process.env.HOST_NAME;
 
-console.log(">>> check env:", process.env.PORT);
+//config upload file
+// default options
+app.use(fileUpload());
 
 //config template engine
 //config static files
